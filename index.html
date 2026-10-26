@@ -55,6 +55,27 @@
         .strong {
             color: #008000 !important;
         }
+
+        .requirements {
+            display: inline-block;
+            text-align: left;
+            margin-top: 15px;
+            padding: 15px 25px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .requirements p {
+            margin: 10px 0;
+        }
+
+        .passed {
+            color: green;
+        }
+
+        .failed {
+            color: #dc2626;
+        }
     </style>
 </head>
 
@@ -73,6 +94,15 @@
 
     <p id="result"></p>
 
+    <div class="requirements">
+        <h3>Password requirements</h3>
+        <p id="length" class="failed">✗ At least 8 characters</p>
+        <p id="uppercase" class="failed">✗ An uppercase letter (A-Z)</p>
+        <p id="lowercase" class="failed">✗ A lowercase letter (a-z)</p>
+        <p id="number" class="failed">✗ A number (0-9)</p>
+        <p id="symbol" class="failed">✗ A special character (!@#$)</p>
+    </div>
+
     <script>
         function checkPassword() {
             let password = document.getElementById("password").value;
@@ -83,6 +113,12 @@
             let hasLowercase = /[a-z]/.test(password);
             let hasNumber = /[0-9]/.test(password);
             let hasSymbol = /[^A-Za-z0-9]/.test(password);
+
+            updateRequirement("length", hasLength, "At least 8 characters");
+            updateRequirement("uppercase", hasUppercase, "An uppercase letter (A-Z)");
+            updateRequirement("lowercase", hasLowercase, "A lowercase letter (a-z)");
+            updateRequirement("number", hasNumber, "A number (0-9)");
+            updateRequirement("symbol", hasSymbol, "A special character (!@#$)");
 
             let score = 0;
 
@@ -101,6 +137,18 @@
             } else {
                 result.textContent = "Strong password";
                 result.className = "strong";
+            }
+        }
+
+        function updateRequirement(id, passed, description) {
+            let item = document.getElementById(id);
+
+            if (passed) {
+                item.textContent = "✓ " + description;
+                item.className = "passed";
+            } else {
+                item.textContent = "✗ " + description;
+                item.className = "failed";
             }
         }
     </script>
