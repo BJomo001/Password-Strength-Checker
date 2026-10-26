@@ -4,13 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            background-color: #f0f4f8;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        input {
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .weak {
+            color: red;
+        }
+
+        .medium {
+            color: darkorange;
+        }
+
+        .strong {
+            color: green;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Password Strength Checker</h1>
 
     <p>Enter a password to check its strength.</p>
 
-    <input type="password" id="password" placeholder="Enter password">
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+    >
 
     <button onclick="checkPassword()">Check Strength</button>
 
@@ -37,10 +94,13 @@
 
             if (score <= 2) {
                 result.textContent = "Weak password";
+                result.className = "weak";
             } else if (score <= 4) {
                 result.textContent = "Medium password";
+                result.className = "medium";
             } else {
                 result.textContent = "Strong password";
+                result.className = "strong";
             }
         }
     </script>
