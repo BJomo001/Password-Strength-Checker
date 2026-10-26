@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 60px;
+            padding: 20px;
             background-color: #f0f4f8;
         }
 
@@ -63,6 +64,7 @@
             padding: 15px 25px;
             background-color: white;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .requirements p {
@@ -70,7 +72,7 @@
         }
 
         .passed {
-            color: green;
+            color: #008000;
         }
 
         .failed {
@@ -96,6 +98,7 @@
 
     <div class="requirements">
         <h3>Password requirements</h3>
+
         <p id="length" class="failed">✗ At least 8 characters</p>
         <p id="uppercase" class="failed">✗ An uppercase letter (A-Z)</p>
         <p id="lowercase" class="failed">✗ A lowercase letter (a-z)</p>
@@ -114,11 +117,35 @@
             let hasNumber = /[0-9]/.test(password);
             let hasSymbol = /[^A-Za-z0-9]/.test(password);
 
-            updateRequirement("length", hasLength, "At least 8 characters");
-            updateRequirement("uppercase", hasUppercase, "An uppercase letter (A-Z)");
-            updateRequirement("lowercase", hasLowercase, "A lowercase letter (a-z)");
-            updateRequirement("number", hasNumber, "A number (0-9)");
-            updateRequirement("symbol", hasSymbol, "A special character (!@#$)");
+            updateRequirement(
+                "length",
+                hasLength,
+                "At least 8 characters"
+            );
+
+            updateRequirement(
+                "uppercase",
+                hasUppercase,
+                "An uppercase letter (A-Z)"
+            );
+
+            updateRequirement(
+                "lowercase",
+                hasLowercase,
+                "A lowercase letter (a-z)"
+            );
+
+            updateRequirement(
+                "number",
+                hasNumber,
+                "A number (0-9)"
+            );
+
+            updateRequirement(
+                "symbol",
+                hasSymbol,
+                "A special character (!@#$)"
+            );
 
             let score = 0;
 
