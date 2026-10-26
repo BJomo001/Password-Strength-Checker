@@ -92,6 +92,12 @@
         placeholder="Enter password"
     >
 
+    <button onclick="togglePassword(this)">
+        Show Password
+    </button>
+
+    <br>
+
     <button onclick="checkPassword()">Check Strength</button>
 
     <p id="result"></p>
@@ -176,6 +182,18 @@
             } else {
                 item.textContent = "✗ " + description;
                 item.className = "failed";
+            }
+        }
+
+        function togglePassword(button) {
+            let password = document.getElementById("password");
+
+            if (password.type === "password") {
+                password.type = "text";
+                button.textContent = "Hide Password";
+            } else {
+                password.type = "password";
+                button.textContent = "Show Password";
             }
         }
     </script>
