@@ -1,0 +1,98 @@
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #f0f4f8;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        input {
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .weak {
+            color: #ff0000 !important;
+        }
+
+        .medium {
+            color: #ff8c00 !important;
+        }
+
+        .strong {
+            color: #008000 !important;
+        }
+
+        .meter-container {
+            max-width: 350px;
+            margin: 20px auto;
+        }
+
+        .meter-background {
+            width: 100%;
+            height: 14px;
+            background-color: #d1d5db;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #strengthBar {
+            width: 0%;
+            height: 100%;
+            background-color: #dc2626;
+            border-radius: 10px;
+            transition: width 0.4s ease;
+        }
+
+        #strengthLabel {
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .requirements {
+            display: inline-block;
+            text-align: left;
+            margin-top: 15px;
+            padding: 15px 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .requirements p {
+            margin: 10px 0;
+        }
+
+        .passed {
+            color: #008000;
+        }
+
+        .failed {
+            color: #dc2626;
+        }
