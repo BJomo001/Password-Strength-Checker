@@ -1,4 +1,5 @@
 function checkPassword() {
+            
             let password = document.getElementById("password").value;
             let result = document.getElementById("result");
             let strengthBar = document.getElementById("strengthBar");
