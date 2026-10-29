@@ -16,6 +16,11 @@
     font-size: 12px;
 }
 
+.input-group input:focus {
+    border-color: blue;
+    outline: none;
+}
+
 body {
             font-family: Arial, sans-serif;
             text-align: center;
