@@ -1,9 +1,27 @@
+.input-group { position: relative; }
+
+.input-group label {
+    position: absolute;
+    left: 375px;
+    top: 20px;
+    padding: 0 5px;
+    background: white;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 1px;
+    font-size: 12px;
+}
+
 body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 60px;
             padding: 20px;
-            background-color: #293036;
+            background-color: #f0f4f8;
         }
 
         h1 {
