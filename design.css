@@ -1,8 +1,8 @@
 .input-group { position: relative; }
 .input-group label {
     position: absolute;
-    left: 535px;
-    top: 20px;
+    left: 85px;
+    top: 18px;
     padding: 0 5px;
     background: white;
     transition: 0.3s;
@@ -21,11 +21,16 @@
 }
 
 body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 60px;
-            padding: 20px;
-            background-color: #f0f4f8;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        box-sizing: border-box;
         }
 
         h1 {
@@ -117,4 +122,14 @@ body {
 
         .failed {
             color: #dc2626;
+        }
+
+        .card {
+        background: white;
+        width: 400px;
+        max-width: 100%;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
         }
