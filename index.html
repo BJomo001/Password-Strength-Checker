@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Strength Checker</title>
+    <title>SecureVault|Forge. Secure. Protect.</title>
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="design.css">
 </head>
 <body>
 
+<section class="page-heading">
+      <span class="eyebrow" style="color: rgb(255, 255, 255);">SECUREVAULT PASSWORD CREATOR</span>
+      <h1 class="gradient-text">Create a strong password</h1>
+    <p style="color: rgb(251, 251, 252); font-size: 16px; font-weight: 300;">Enter your desired password and create a secure password directly in your browser</p>
+</section>    
+
 <div class="card">
 
-    <h1>Password Strength Checker</h1>
+    <h1 class="gradient-text">Password Strength Checker</h1>
 
-    <p>Enter a password to check its strength.</p>
+    <p style="color: rgb(255, 255, 255);">Enter a password to check its strength.</p>
 
    <div class="input-group">
     <input type="password" id="password" placeholder=" ">
@@ -22,9 +28,7 @@
 
     <button onclick="togglePassword(this)">
         Show Password
-    </button>
-
-    <br>
+    </button>    
 
     <button onclick="checkPassword()">Check Strength</button>
 
@@ -34,12 +38,12 @@
         <div class="meter-background">
             <div id="strengthBar"></div>
         </div>
-        <p id="strengthLabel">Strength meter: Not checked</p>
+        <p id="strengthLabel" style="color: rgb(255, 255, 255);">Strength meter: Not checked</p>
     </div>
 
     <div class="requirements">
 
-        <h3>Password requirements</h3>
+        <h3 style="color: rgb(255, 255, 255);">Password requirements</h3>
 
         <p id="length" class="failed">✗ At least 8 characters</p>
         <p id="uppercase" class="failed">✗ An uppercase letter (A-Z)</p>
