@@ -1,8 +1,7 @@
 .input-group { position: relative; }
-
 .input-group label {
     position: absolute;
-    left: 375px;
+    left: 535px;
     top: 20px;
     padding: 0 5px;
     background: white;
