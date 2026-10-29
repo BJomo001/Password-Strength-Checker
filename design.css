@@ -74,15 +74,15 @@ body {
         }
 
         .weak {
-            color: #ff0000 !important;
+            color: #fa4141 !important;
         }
 
         .medium {
-            color: #ff8c00 !important;
+            color: #ffb04f !important;
         }
 
         .strong {
-            color: #008000 !important;
+            color: #60fd60 !important;
         }
 
         .meter-container {
@@ -126,11 +126,11 @@ body {
         }
 
         .passed {
-            color: #008000;
+            color: #61f861;
         }
 
         .failed {
-            color: #dc2626;
+            color: #fa5959;
         }
 
         .card {
