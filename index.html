@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Strength Checker</title>
+    <title>SecureVault | Forge, Secure & Protect.</title>
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
     <link rel="stylesheet" href="design.css">
 </head>
 <body>
 
-    <h1>Password Strength Checker</h1>
+<section class="page-heading">
+      <h1 style="color: rgb(255, 255, 255);">SECURE<span class="gradient-text">VAULT </span>PASSWORD VALIDATOR</h1>
+      <p style="color: rgb(255, 255, 255);">Need a strong password?</p>
+    <p style="color: rgb(251, 251, 252);">Enter your desired password and create a secure password directly in your browser.</p>
+</section>    
 
-    <p>Enter a password to check its strength.</p>
+<div class="card">
 
-    <input
-        type="password"
-        id="password"
-        placeholder="Enter password"
-    >
+    <h1 class="gradient-text">Password Strength Checker</h1>
+
+    <p style="color: rgb(255, 255, 255);">Enter a password to check its strength.</p>
+
+   <div class="input-group">
+    <input type="password" id="password" placeholder=" ">
+    <label for="password">Enter password</label>    
+   </div>
 
     <button onclick="togglePassword(this)">
         Show Password
-    </button>
-
-    <br>
+    </button>    
 
     <button onclick="checkPassword()">Check Strength</button>
 
@@ -33,21 +38,40 @@
         <div class="meter-background">
             <div id="strengthBar"></div>
         </div>
-        <p id="strengthLabel">Strength meter: Not checked</p>
+        <p id="strengthLabel" style="color: rgb(255, 255, 255);">Strength meter: Not checked</p>
     </div>
 
     <div class="requirements">
 
-        <h3>Password requirements</h3>
+        <h3 style="color: rgb(255, 255, 255);">Password requirements</h3>
 
         <p id="length" class="failed">✗ At least 8 characters</p>
         <p id="uppercase" class="failed">✗ An uppercase letter (A-Z)</p>
         <p id="lowercase" class="failed">✗ A lowercase letter (a-z)</p>
         <p id="number" class="failed">✗ A number (0-9)</p>
         <p id="symbol" class="failed">✗ A special character (!@#$)</p>
-    </div>  
+    </div> 
+    
+</div>
+
+<footer class="site-footer">
+    <p class="footer-brand" style="color: rgb(255, 255, 255);">
+        Secure<span class="gradient-text">Vault</span>
+    </p>
+
+    <p style="color: rgb(255, 255, 255);">
+        Forge. Secure. Protect.
+    </p>
+
+    <p class="footer-note" style="color: rgb(255, 255, 255);">
+        Your passwords, your privacy. Validate directly in your browser.
+    </p>
+
+    <p class="copyright" style="color: rgb(255, 255, 255);">
+        &copy; 2026 SecureVault. All rights reserved.
+    </p>
+</footer>
    
 <script src="logic.js"></script>    
 </body>
 </html>
-
