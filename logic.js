@@ -3,19 +3,14 @@ function checkPassword() {
             let password = document.getElementById("password").value;
             let result = document.getElementById("result");
             let strengthBar = document.getElementById("strengthBar");
-            let strengthLabel = document.getElementById("strengthLabel");
-            
-           
-    
-
-            // Check if the password field is empty
+            let strengthLabel = document.getElementById("strengthLabel");         
+               
+            // Checking if the password field is empty
             if (password.trim() === "") {
             result.textContent = "Please enter a password";
             result.className = "failed";
-
             strengthBar.style.width = "0%";
             strengthBar.style.backgroundColor = "transparent";
-
             strengthLabel.textContent = "Strength meter: Not checked";
             strengthLabel.style.color = "white";
 
